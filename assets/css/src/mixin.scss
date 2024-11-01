@@ -1,0 +1,36 @@
+$red: #e04f4f;
+$green: #309b34;
+$grey: #575757;
+$lightGrey: #c0c0c0;
+
+@keyframes zypento-spinner-icon {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@mixin zypento-spinner($size: 48px, $border: #000, $borderTop: #fff, $borderSize: 6px) {
+    border: $borderSize solid $border; /* Light grey */
+    border-top: $borderSize solid $borderTop; /* Blue */
+    border-radius: 50%;
+    width: $size;
+    height: $size;
+    animation: zypento-spinner-icon 2s linear infinite;
+    display: inline-block;
+}
+@mixin zypento-rounded-button($size: 20px, $bgColor: #000, $textColor: #fff, $paddingVert: 12px, $paddingHor: 36px) {
+	font-size: ( $size * 0.6 );
+	background-color: $bgColor;
+	padding: ( $paddingVert * 0.6 ) ( $paddingHor * 0.6 );
+	color: $textColor;
+	border-radius: 1.2em;
+	@media screen and (min-width: 1201px) {
+		font-size: $size;
+		background-color: $bgColor;
+		padding: $paddingVert $paddingHor;
+		color: $textColor;
+		border-radius: 1.4em;
+	}
+	display: inline-block;
+	cursor: pointer;
+	font-weight: 700;
+	line-height: 1.0;
+}

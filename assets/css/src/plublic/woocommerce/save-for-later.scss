@@ -1,0 +1,128 @@
+.zypento-save-for-later-link{
+    position:absolute;
+    left:1rem;
+    bottom:13px;
+    margin:0;
+    cursor:pointer;
+}
+.zypento-save-for-later-display-container{
+    margin: 100px 0 50px 0;
+    box-sizing: border-box;
+    & *{
+        box-sizing: border-box;
+    }
+}
+.zypento-save-for-later-display{
+    display: none;
+    width: 100%;
+    padding: 80px 40px 40px 40px;
+    background: rgba($color: #000000, $alpha: 0.05);
+    position: relative;
+}
+.zypento-save-for-later-overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba($color: #ffffff, $alpha: 0.8);
+    z-index: 99;
+    display: none;
+}
+.zypento-save-for-later-heading{
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    margin: 0;
+}
+.zypento-save-for-later-content{
+    width: 100%;
+    padding: 20px 0 0 0;
+    overflow: hidden;
+}
+.zypento-save-for-later-belt{
+    overflow: auto;
+}
+.zypento-save-for-later-panel{
+    float: left;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;    
+}
+.zypento-saved-later-item{
+    flex-basis: 50%;
+    position: relative;
+    padding: 15px 15px 15px 130px;
+    min-height: 130px;
+    &>img{
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 15px;
+        left: 0;
+    }
+    &>p{
+        margin: 0;
+        padding: 15px 0 0 0;
+    }
+}
+.zypento-saved-later-move{
+    display: inline-block;
+    padding: 7px 30px;
+    font-size: 16px;
+    background: rgba($color: #000000, $alpha: 0.05);
+    color: #000000;
+    border-radius: 23px;
+    cursor: pointer;
+    font-weight: bold;
+    margin: 0 5px 0 0;
+    vertical-align: middle;
+}
+.zypento-saved-later-delete{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32px' height='32px' viewBox='0 0 512 512'%3E%3Cpath fill='%23000000' d='M256 48C141.31 48 48 141.31 48 256s93.31 208 208 208s208-93.31 208-208S370.69 48 256 48Zm75.31 260.69a16 16 0 1 1-22.62 22.62L256 278.63l-52.69 52.68a16 16 0 0 1-22.62-22.62L233.37 256l-52.68-52.69a16 16 0 0 1 22.62-22.62L256 233.37l52.69-52.68a16 16 0 0 1 22.62 22.62L278.63 256Z'/%3E%3C/svg%3E");
+    cursor: pointer;
+    margin: 0;
+    vertical-align: middle;
+}
+.zypento-save-for-later-display-button{
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    &[data-zyp-button-type="next"]{
+        background: rgba($color: #000000, $alpha: 0.05) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' viewBox='0 0 256 256'%3E%3Cpath fill='%23000000' d='m184.49 136.49l-80 80a12 12 0 0 1-17-17L159 128L87.51 56.49a12 12 0 1 1 17-17l80 80a12 12 0 0 1-.02 17Z'/%3E%3C/svg%3E") no-repeat center;
+        top: 20px;
+        right: 40px;
+        cursor: pointer;
+    }
+    &[data-zyp-button-type="prev"]{
+        background: rgba($color: #000000, $alpha: 0.05) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' viewBox='0 0 256 256'%3E%3Cg transform='rotate(180 128 128)'%3E%3Cpath fill='%23000000' d='m184.49 136.49l-80 80a12 12 0 0 1-17-17L159 128L87.51 56.49a12 12 0 1 1 17-17l80 80a12 12 0 0 1-.02 17Z'/%3E%3C/g%3E%3C/svg%3E") no-repeat center;
+        top: 20px;
+        right: 90px;
+        cursor: pointer;
+    }
+    &[data-zyp-enabled="no"]{
+        cursor: default;
+        opacity: 0.3;
+    }
+}
+
+.zypento-save-for-later-message{
+    width: 100%;
+    display: none;
+    padding: 10px 20px;
+    margin: 0 0 30px 0;
+    background: rgba($color: #000000, $alpha: 0.05);
+    &[data-zypento-type="error"]{
+        color: #cd3939;
+    }
+}
+.zypento-save-for-later-message-content{
+    width: 100%;
+    margin: 0;
+}

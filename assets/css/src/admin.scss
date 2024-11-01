@@ -1,0 +1,146 @@
+@import "./mixin.scss";
+
+.zypento-admin-settings-container{
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    background: rgba($color: #000000, $alpha: 0.05);
+    margin: 50px;
+    box-sizing: border-box;
+    & *{
+        box-sizing: border-box;
+    }
+}
+.zypento-admin-settings-header{
+    width: 100%;
+    padding: 20px 20px;
+    font-size: 24px;
+    margin: 0;
+    background: rgba($color: #000000, $alpha: 0.08);
+}
+
+.zypento-admin-settings{
+    width: 100%;
+    position: relative;
+}
+.zypento-admin-settings-overlay{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $lightGrey;
+    z-index: 99;
+    padding: 100px 0 0 0;
+    &>p{
+        text-align: center;
+        margin: 0 0 10px 0;
+    }
+}
+
+.zypento-admin-settings-message{
+    width: calc( 100% - 100px );
+    margin: 20px 50px 0 50px;
+    display: none;
+    padding: 10px 20px;
+    border: 1px dotted rgba($color: #000000, $alpha: 0.05);
+    &[data-zypento-type="error"]{
+        border: 1px dotted $red;
+        display: block;
+    }
+    &[data-zypento-type="success"]{
+        border: 1px dotted $green;
+        display: block;
+    }
+}
+
+.zypento-admin-settings-spinner{
+    @include zypento-spinner(48px, #000, $green, 6px);
+}
+
+.zypento-admin-settings-action{
+    width: 100%;
+    padding: 20px 20px;
+    text-align: right;
+    background: rgba($color: #000000, $alpha: 0.04);
+}
+.zypento-admin-settings-action-button{
+    @include zypento-rounded-button(18px, #000, #fff, 12px, 36px);
+}
+
+.zypento-admin-settings-content{
+    padding: 50px;
+    @media screen and (min-width : 1201px) {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+}
+.zypento-admin-setting-container{
+    width: 100%;
+    background: rgba($color: #000000, $alpha: 0.05);
+    border-radius: 4px;
+    position: relative;
+    padding: 0 0 55px 0;
+    @media screen and (min-width : 1201px) {
+        margin: 0 10px 20px 10px;
+        flex-basis: calc(50% - 20px);
+    }
+}
+.zypento-admin-setting-content{
+    padding: 20px;
+    &>h4{
+        font-size: 36px;
+        font-weight: bold;
+        margin: 0;
+        line-height: 1.1;
+        margin: 0 0 15px 0;
+    }
+    &>p{
+        font-size: 18px;
+        margin: 0;
+        line-height: 1.2;
+        margin: 0 0 15px 0;
+    }
+}
+.zypento-admin-setting-action{
+    width: 100%;
+    padding: 15px 20px;
+    font-size: 24px;
+    margin: 0;
+    background: rgba($color: #000000, $alpha: 0.05);
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.zypento-admin-setting-action-toggle{
+    width: 40px;
+    height: 20px;
+    background: $red;
+    border-radius: 10px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    & span{
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        background: $grey;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 1s;
+    }
+    &[data-zyp-status="yes"]{
+        background: $green;
+    }
+    &[data-zyp-status="yes"] span{
+        left: 20px;
+        transition: 1s;
+    }
+}
+

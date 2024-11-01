@@ -1,0 +1,51 @@
+#zypento-variable-timer{
+    width: 100%;
+    box-sizing: border-box;
+    & *{
+        box-sizing: border-box;
+    }
+}
+.zypento-variable-timer-content{
+    display: block;
+    width: 100%;
+    max-width: 465px;
+    background: rgba($color: #000000, $alpha: 0.05);
+}
+.zypento-variable-timer-heading{
+    width: 100%;
+    padding: 10px 30px;
+    background: rgba($color: #000000, $alpha: 0.05);
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+#zypento-variable-timer-actual{
+    padding: 20px 30px;
+    margin: 0;
+    &>span{
+        width: 80px;
+        height: 110px;
+        background: rgba($color: #000000, $alpha: 0.05);
+        position: relative;
+        padding: 0 0 24px 0;
+        font-size: 48px;
+        font-weight: bold;
+        display: inline-block;
+        margin: 0 10px;
+        text-align: center;
+        &>span{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 30px;
+            background: rgba($color: #000000, $alpha: 0.05);
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            text-align: center;
+            line-height: 1;
+            padding: 5px 10px;
+        }
+    }
+}
